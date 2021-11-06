@@ -1,5 +1,7 @@
 package com.pb.datsiuk.hw6;
 
+import java.util.Objects;
+
 public abstract class Animal {
         private String food;
         private String location;
@@ -45,8 +47,8 @@ public abstract class Animal {
 
             Animal animal = (Animal) o;
 
-            if (food != null ? !food.equals(animal.food) : animal.food != null) return false;
-            return location != null ? location.equals(animal.location) : animal.location == null;
+            if (!Objects.equals(food, animal.food)) return false;
+            return Objects.equals(location, animal.location);
         }
 
         @Override

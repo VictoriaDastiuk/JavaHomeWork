@@ -1,5 +1,7 @@
 package com.pb.datsiuk.hw6;
 
+import java.util.Objects;
+
 public class Cat extends Animal {
     private String color;
 
@@ -40,7 +42,7 @@ public class Cat extends Animal {
 
         Cat cat = (Cat) o;
 
-        return color != null ? color.equals(cat.color) : cat.color == null;
+        return Objects.equals(color, cat.color);
     }
 
     @Override
